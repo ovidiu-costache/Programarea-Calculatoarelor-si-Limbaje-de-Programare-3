@@ -79,9 +79,9 @@ var_categ = df.select_dtypes(include = ["object"]).columns.tolist()
 for col in var_categ:
     plt.figure()
     sns.countplot(x=col, data=df)
-    plt.title(f"Distributie {col}")
+    plt.title(f"Countplot {col}")
     # Ca sa salvez in fisiere diferite fiecare grafic
-    plt.savefig(f"distributie_{col}.png")
+    plt.savefig(f"countplot_{col}.png")
     plt.close()
 
 # Detectarea outlierilor
@@ -180,3 +180,4 @@ plt.ylabel("Etichete reale")
 plt.title("Matrice de confuzie")
 plt.savefig("matrice_confuzie.png")
 plt.close()
+
